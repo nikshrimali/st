@@ -301,7 +301,46 @@
             margin: 0 auto;
             font-size: 1.2rem;
             line-height: 1.8;
+            text-align: left;
         }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        .about-content h4 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content ul,
+        .about-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .about-content strong {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
 
         /* Video Section */
         .video-section {
