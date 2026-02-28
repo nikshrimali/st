@@ -100,6 +100,16 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-3. In your GitHub repository settings, navigate to **Pages** -> **Build and deployment** -> **Source** and select **GitHub Actions**.
+## Troubleshooting Deployment Errors (Common Issues)
+
+If you see an error saying `Branch "gemini3-wb" is not allowed to deploy to github-pages due to environment protection rules`, this is because GitHub's default `github-pages` environment is restricted to the default branch (`main`).
+
+### How to fix:
+1. In your GitHub repository, go to **Settings** -> **Environments**.
+2. Click on the **github-pages** environment.
+3. Under **Deployment branches and tags**, change the restriction from "Selected branches" to **"All branches"**, OR add `gemini3-wb` to the allowed branches.
+4. Go to the **Actions** tab and **re-run** the failed job.
+
+---
 
 4. Push your code to the `gemini3-wb` branch. GitHub Actions will automatically build and deploy your application to GitHub Pages.
