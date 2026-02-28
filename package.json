@@ -12,7 +12,7 @@
     "dependencies": {
         "@tailwindcss/typography": "^0.5.19",
         "gsap": "^3.12.5",
-        "lucide-react": "^0.300.0",
+        "lucide-react": "^0.575.0",
         "marked": "^17.0.3",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
