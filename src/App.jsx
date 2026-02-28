@@ -26,16 +26,16 @@ const App = () => {
     ];
 
     const baseImages = [
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16.jpg", name: "Floral Heritage", category: "Mulmul Cotton Batik Saree" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 5.jpg", name: "Geometric Elegance", category: "Traditional Batik Saree" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 6.jpg", name: "Modern Batik", category: "Designer Batik Fabric" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 7.jpg", name: "Cotton Dreams", category: "Mulmul Cotton Batik" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 8.jpg", name: "Artisan Collection", category: "Handcrafted Batik Saree" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 9.jpg", name: "Vibrant Traditions", category: "Batik Fabric" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 10.jpg", name: "Royal Batik", category: "Premium Batik Saree" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 11.jpg", name: "Summer Breeze", category: "Lightweight Mulmul Batik" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 12.jpg", name: "Feather Light", category: "Lightweight Mulmul" },
-        { src: "/catalog-image/PHOTO-2025-12-07-11-21-16 13.jpg", name: "Traditional Art", category: "Classic Batik Design" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16.jpg", name: "Floral Heritage", category: "Mulmul Cotton Batik Saree" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 5.jpg", name: "Geometric Elegance", category: "Traditional Batik Saree" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 6.jpg", name: "Modern Batik", category: "Designer Batik Fabric" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 7.jpg", name: "Cotton Dreams", category: "Mulmul Cotton Batik" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 8.jpg", name: "Artisan Collection", category: "Handcrafted Batik Saree" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 9.jpg", name: "Vibrant Traditions", category: "Batik Fabric" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 10.jpg", name: "Royal Batik", category: "Premium Batik Saree" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 11.jpg", name: "Summer Breeze", category: "Lightweight Mulmul Batik" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 12.jpg", name: "Feather Light", category: "Lightweight Mulmul" },
+        { src: "catalog-image/PHOTO-2025-12-07-11-21-16 13.jpg", name: "Traditional Art", category: "Classic Batik Design" },
     ];
 
     const catalogImages = [
@@ -212,7 +212,7 @@ const App = () => {
             {/* HERO SECTION */}
             <section ref={heroRef} className="relative w-full h-[100dvh] flex flex-col justify-end pb-24 px-6 md:px-12 lg:px-24 overflow-hidden rounded-b-3rem bg-primary">
                 <div className="absolute inset-0 z-0">
-                    <img src="/hero-image/PHOTO-2025-09-04-15-30-37.jpg" alt="Model wearing premium Indian Batik Saree" className="w-full h-full object-cover object-top" />
+                    <img src={`${import.meta.env.BASE_URL}hero-image/PHOTO-2025-09-04-15-30-37.jpg`} alt="Model wearing premium Indian Batik Saree" className="w-full h-full object-cover object-top" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/20"></div>
                 </div>
 
@@ -316,7 +316,7 @@ const App = () => {
                     {catalogImages.slice(0, 10).map((img, idx) => (
                         <div key={idx} className="flex-shrink-0 group cursor-pointer hover-lift">
                             <div className="h-[45vh] aspect-[3/4] rounded-2rem overflow-hidden bg-textdark/5 relative mb-4 shadow-sm">
-                                <img src={img.src} alt={img.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" draggable="false" />
+                                <img src={`${import.meta.env.BASE_URL}${img.src}`} alt={img.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" draggable="false" />
                                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <h3 className="font-drama text-lg md:text-xl mb-1 text-primary">{img.name}</h3>
@@ -343,7 +343,7 @@ const App = () => {
                         {catalogImages.map((img, idx) => (
                             <div key={idx} className="group cursor-pointer hover-lift">
                                 <div className="w-full aspect-[3/4] rounded-[1.5rem] overflow-hidden bg-textdark/5 relative mb-4 shadow-sm border border-black/5">
-                                    <img src={img.src} alt={img.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                                    <img src={`${import.meta.env.BASE_URL}${img.src}`} alt={img.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
                                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                                 <h3 className="font-drama text-lg md:text-xl mb-1 text-textdark group-hover:text-accent transition-colors">{img.name}</h3>
@@ -358,7 +358,7 @@ const App = () => {
             {/* PHILOSOPHY SECTION */}
             <section id="about" ref={philosophyRef} className="relative py-48 w-full bg-primary text-background overflow-hidden rounded-3rem mb-[-3rem] pb-[10rem] z-20 shadow-2xl">
                 <div className="absolute inset-0 z-0 opacity-10 overflow-hidden">
-                    <img ref={philosophyParallaxRef} src="/hero-image/PHOTO-2025-09-04-15-30-37.jpg" alt="Abstract fibers" className="w-full h-[130%] object-cover object-center -top-[15%] filter grayscale blur-sm" />
+                    <img ref={philosophyParallaxRef} src={`${import.meta.env.BASE_URL}hero-image/PHOTO-2025-09-04-15-30-37.jpg`} alt="Abstract fibers" className="w-full h-[130%] object-cover object-center -top-[15%] filter grayscale blur-sm" />
                 </div>
 
                 <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -388,7 +388,7 @@ const App = () => {
                             <p className="font-mono text-sm md:text-base leading-relaxed opacity-70 text-textdark">We supply top-grade mul mul, cambric, poplin, and rayon tailored for tropical climates. Best quality colors, fasteners, and binders are used in the process, and every fabric undergoes strict quality checks for softness, colour fastness, and print clarity.</p>
                         </div>
                         <div className="flex-1 w-full bg-background rounded-2xl h-full relative overflow-hidden flex items-center justify-center border border-black/5">
-                            <img src="/catalog-image/PHOTO-2025-12-07-11-21-16 13.jpg" className="absolute inset-0 w-full h-full object-cover" />
+                            <img src={`${import.meta.env.BASE_URL}catalog-image/PHOTO-2025-12-07-11-21-16 13.jpg`} className="absolute inset-0 w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -397,7 +397,7 @@ const App = () => {
                 <div className="protocol-card absolute z-20 top-0 left-0 w-full h-full translate-y-full flex items-center justify-center p-6 bg-background pt-[3rem]">
                     <div className="w-full max-w-5xl h-[80%] rounded-3rem bg-primary text-white shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
                         <div className="flex-1 w-full bg-gradient-to-br from-textdark to-primary rounded-2xl h-full relative overflow-hidden flex items-center justify-center border border-white/10 group shadow-inner">
-                            <img src="/catalog-image/PHOTO-2025-12-07-11-21-16.jpg" className="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-1000 group-hover:scale-110" />
+                            <img src={`${import.meta.env.BASE_URL}catalog-image/PHOTO-2025-12-07-11-21-16.jpg`} className="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-1000 group-hover:scale-110" />
                             <div className="w-full h-full relative z-10 mix-blend-overlay">
                                 <div className="absolute top-0 left-0 w-full h-[2px] bg-accent z-10 animate-[bounce_3s_infinite]"></div>
                             </div>
@@ -432,7 +432,7 @@ const App = () => {
                 <div className="protocol-card absolute z-40 top-0 left-0 w-full h-full translate-y-full flex items-center justify-center p-6 bg-background pt-[3rem]">
                     <div className="w-full max-w-5xl h-[80%] rounded-3rem bg-white shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 group border border-black/5">
                         <div className="flex-1 w-full bg-background rounded-2xl h-full relative overflow-hidden flex items-center justify-center shadow-inner group-hover:shadow-2xl transition-shadow duration-500">
-                            <img src={window.location.origin.includes('localhost') ? '/dist/catalog-image/sri-lankandrape.jpeg' : '/catalog-image/sri-lankandrape.jpeg'} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                            <img src={`${import.meta.env.BASE_URL}catalog-image/sri-lankandrape.jpeg`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                         </div>
                         <div className="flex-1">
                             <div className="font-mono text-sm text-accent mb-6">04 // Wider Width</div>
@@ -455,7 +455,7 @@ const App = () => {
                         {blogPosts.map((blog, i) => (
                             <Link to={`/blog/${blog.slug}`} key={i} className="group block cursor-pointer hover-lift">
                                 <div className="w-full aspect-[4/3] rounded-2rem overflow-hidden bg-textdark/5 relative mb-6 shadow-sm border border-black/5">
-                                    <img src={blog.img} alt={blog.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
+                                    <img src={`${import.meta.env.BASE_URL}${blog.img}`} alt={blog.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
                                 </div>
                                 <h3 className="font-drama text-xl md:text-2xl mb-3 text-textdark leading-snug group-hover:text-accent transition-colors">{blog.title}</h3>
                                 <span className="font-mono text-[10px] uppercase tracking-wider text-textdark/50 group-hover:text-accent transition-colors flex items-center gap-1">Read article <ArrowRight size={10} /></span>
